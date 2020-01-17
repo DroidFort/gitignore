@@ -1,0 +1,25 @@
+<idea-plugin>
+    <id>org.droidfort.gitignore</id>
+    <name>gitignore</name>
+    <vendor email="support@droidfort.com" url="http://www.droidfort.com">DroidFort</vendor>
+
+    <description><![CDATA[This plugin is used to create simple .gitignore file]]></description>
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+    <depends>com.intellij.modules.platform</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+    </extensions>
+
+    <actions>
+        <!-- Add your actions here -->
+        <action id="com.sachshelar.gitignore.GitIgnore" class="com.sachshelar.gitignore.GitIgnore"
+                text="Add *.gitignore" description="Add new .gitigore file">
+            <add-to-group group-id="ProjectViewPopupMenu" relative-to-action="WeighingNewGroup" anchor="after"/>
+            <keyboard-shortcut keymap="$default" first-keystroke="ctrl alt I"/>
+        </action>
+
+    </actions>
+</idea-plugin>
